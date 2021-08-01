@@ -25,6 +25,16 @@ body {
     margin: 15px 0;
 }
 
+.input.light::selection {
+    color: white;
+    background-color: black;
+}
+
+.input.dark::selection {
+    color: black;
+    background-color: white;
+}
+
 .calculate {
     font-size: 18px;    
     background-color: white;
@@ -36,7 +46,6 @@ body {
 .value {
     height: 24px;
 }
-
 
 .light {
     background-color: white;
@@ -50,16 +59,6 @@ body {
     border-color: white;
 }
 
-button.light:hover {
-    background-color: grey;
-}
-
-button.dark:hover {
-
-}
-
-
-
 .footer > * {
     margin: 0 2px;
 }
@@ -68,3 +67,20 @@ button.dark:hover {
     font-size: 20px;
 }
 
+.fa-question-circle:hover::after {
+    opacity: 0;
+    content: "";
+}
+
+.fa-question-circle:hover::after {
+    content: "Ctrl + Enter to calculate\A= to increase font size\A- to decrease font size";
+    opacity: 1;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    padding: 7px 10px;
+    position: absolute;
+    white-space:pre-wrap;
+    left: 75px;
+}

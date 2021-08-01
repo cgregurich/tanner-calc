@@ -1,5 +1,6 @@
 function loadFromLocalStorage(){
   input.style.fontSize = localStorage.getItem("fontSize");
+  value.style.fontSize = localStorage.getItem("fontSize");
   contrastMode = localStorage.getItem("contrastMode");
   setContrastMode();
 }
@@ -38,16 +39,20 @@ function keyPressEvent(e){
 function increaseInputFontSize(){
   if (input.style.fontSize == ""){
     input.style.fontSize = "16px";
+    value.style.fontSize = "16px";
   }
   input.style.fontSize = `${parseInt(input.style.fontSize) + 1}px`;
+  value.style.fontSize = `${parseInt(input.style.fontSize) + 1}px`;
   saveFontSize();
 }
 
 function decreaseInputFontSize(){
   if (input.style.fontSize == ""){
     input.style.fontSize = "16px";
+    value.style.fontSize = "16px";
   }
   input.style.fontSize = `${parseInt(input.style.fontSize) - 1}px`;
+  value.style.fontSize = `${parseInt(input.style.fontSize) - 1}px`;
   saveFontSize();
 }
 
