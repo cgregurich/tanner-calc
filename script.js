@@ -26,11 +26,11 @@ function keyPressEvent(e){
   if (e.code == "Enter" && e.ctrlKey){
     showSum();
   }
-  if (e.code == "Equal"){
+  if (e.code == "Equal" && e.ctrlKey){
     e.preventDefault();
     increaseInputFontSize();
   }
-  if (e.code == "Minus"){
+  if (e.code == "Minus" && e.ctrlKey){
     e.preventDefault();
     decreaseInputFontSize();
   }
