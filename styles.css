@@ -73,7 +73,7 @@ body {
 }
 
 .fa-question-circle:hover::after {
-    content: "Ctrl + Enter to calculate\A= to increase font size\A- to decrease font size";
+    content: "Ctrl + Enter to calculate\A Ctrl + = to increase font size\A Ctrl + - to decrease font size";
     opacity: 1;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
