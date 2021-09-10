@@ -22,7 +22,6 @@ function showSum(){
 }
 
 function displayTanner(){
-  console.log("tanner applied");
   input.classList.add("tanner");
 }
 
@@ -30,24 +29,16 @@ function hideTanner(){
   input.classList.remove("tanner");
 }
 
+function checkForTanner(){
+  if (input.value.toLowerCase().trim() == "tanner") displayTanner();
+  else hideTanner();
+}
+
 function keyPressEvent(e){
-  console.log(e);
+  checkForTanner();
   if (e.ctrlKey) e.preventDefault();
   if (e.code == "Enter" && e.ctrlKey){
-    console.log(input.value.toLowerCase().trim());
-    if (input.value.toLowerCase().trim() == "tanner") displayTanner();
-    else hideTanner();
     showSum();
-  }
-  if (e.code == "Equal"){
-    increaseInputFontSize();
-    console.log("equal");
-    e.preventDefault();
-  }
-  if (e.code == "Minus" && e.ctrlKey){
-    console.log("minus");
-    e.preventDefault();
-    decreaseInputFontSize();
   }
 }
 
