@@ -2,6 +2,7 @@
 
 * {
     font-family: "Gowun Dodum";
+    user-select: none;
 }
 
 body {
@@ -16,6 +17,11 @@ body {
     width: 100%;
 }
 
+.tanner {
+    background-image: url("images/tanner.jpg");
+    background-size: contain;
+}
+
 .input {
     border-width: 1px;
     margin: 0;
@@ -23,6 +29,7 @@ body {
     height: 70vh;
     font-size: 16px;
     margin: 15px 0;
+    user-select: all;
 }
 
 .input.light::selection {
@@ -73,7 +80,7 @@ body {
 }
 
 .fa-question-circle:hover::after {
-    content: "Ctrl + Enter to calculate\A Ctrl + = to increase font size\A Ctrl + - to decrease font size";
+    content: "Ctrl + Enter to calculate";
     opacity: 1;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
@@ -83,4 +90,22 @@ body {
     position: absolute;
     white-space:pre-wrap;
     left: 75px;
+}
+
+.size-icon {
+    margin: 0;
+}
+
+.size-icon:hover {
+    background-color: #dddddd;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px #dddddd;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.size-icon:active {
+    background-color: #cccccc;
+    transition: 0s;
+    box-shadow: 0 0 5px 3px #cccccc;
 }
